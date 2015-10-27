@@ -1,0 +1,23 @@
+<h1> <%= @actor.name %></h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Bio</th>
+    <th>Birthday</th>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="<%= @actor.image_url %>" width="200">
+    </td>
+    <td>
+      <%= @actor.bio %>">
+    </td>
+    <td>
+      <%= @actor.dob %>
+    </td>
+  </tr>
+  <tr>
+    <a href="http://localhost:3000/actors">Back</a>
+  </tr>

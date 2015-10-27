@@ -1,0 +1,23 @@
+<h1> <%= @director.name %></h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Bio</th>
+    <th>Birthday</th>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="<%= @director.image_url %>" width="200">
+    </td>
+    <td>
+      <%= @director.bio %>">
+    </td>
+    <td>
+      <%= @director.dob %>
+    </td>
+  </tr>
+  <tr>
+    <a href="http://localhost:3000/directors">Back</a>
+  </tr>
