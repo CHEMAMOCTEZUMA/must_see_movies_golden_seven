@@ -1,0 +1,27 @@
+<h1>Edit <%= @actor.name %> </h1>
+
+<form action="http://localhost:3000/actors/update_actor/<%= @actor.id %>">
+	<div>
+		<label for="actor_name">Name</label>
+		<input id="actor_name" type="text" name="name" value="<%= @actor.name %>">
+	</div>
+	
+	<div>
+		<label for="actor_image_url">Image</label>
+		<input id="actor_image_url" type="text" name="image_url" value="<%= @actor.image_url %>">
+	</div>
+
+	<div>
+		<label for="actor_bio">Bio</label>
+		<input id="actor_bio" type="text" name="bio" value="<%= @actor.bio %>">
+	</div>
+
+	<div>
+		<label for="actor_dob">Birthday</label>
+		<input id="actor_dob" type="text" name="dob" value="<%= @actor.dob %>">
+	</div>
+	
+	<div>
+		<button>Update Actor</button>
+	</div>
+</form>

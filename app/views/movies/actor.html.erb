@@ -1,6 +1,10 @@
-<h1>List of Actors</h1>
+<h1>Actors</h1>
 
-<a href="http://localhost:3000/photos/new">Add a New Movie</a>
+<a href="http://localhost:3000/directors">Directors</a>
+<a href="http://localhost:3000/movies">Movies</a>
+<a href="http://localhost:3000/actors">Actors</a>
+
+<a href="http://localhost:3000/photos/new">Add a New Actor</a>
 
 <table>
   <tr>
@@ -18,6 +22,12 @@
      <td>
       <a href="http://localhost:3000/actors/<%= actor.id %>">Details</a>
     </td>
+    <td>
+      <a href="http://localhost:3000/actors/<%= actor.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/actors/delete_actor/<%= actor.id %>">Delete</a>
+    </td>    
     </tr>
   <% end %>
 </table>
