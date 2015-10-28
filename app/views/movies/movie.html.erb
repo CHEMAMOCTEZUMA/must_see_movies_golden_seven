@@ -1,16 +1,22 @@
-<h1>Movies</h1>
+<div class="container">
+<div class="page-header">
+    <h1>Movies</h1>
+</div>
+<a href="http://localhost:3000/movies/new" class="btn btn-primary">Add a New Movie</a>
 
-<a href="http://localhost:3000/directors">Directors</a>
-<a href="http://localhost:3000/movies">Movies</a>
-<a href="http://localhost:3000/actors">Actors</a>
-
-<a href="http://localhost:3000/movies/new">Add a New Movie</a>
-
-<table>
+<table class="table table-hover">
+<thead>
   <tr>
     <th>Movie</th>
     <th>Title</th>
+    <th>Year</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
+</thead> 
   <% @movies.each do |film| %>
   <tr>
     <td>
@@ -19,14 +25,23 @@
     <td>
       <%= film.title %>
     </td>
-     <td>
-      <a href="http://localhost:3000/movies/<%= film.id %>">Details</a>
+    <td>
+      <%= film.year %>
+    </td>    
+    <td>
+      <%= film.duration %>
     </td>
     <td>
-      <a href="http://localhost:3000/movies/<%= film.id %>/edit">Edit</a>
+      <%= film.description %>
     </td>
     <td>
-      <a href="http://localhost:3000/movies/delete_movie/<%= film.id %>">Delete</a>
+      <a href="http://localhost:3000/movies/<%= film.id %>" class="btn btn-primary"><i class="fa fa-search-plus"></i></a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/movies/<%= film.id %>/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/movies/delete_movie/<%= film.id %>" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
     </td>
     </tr>
   <% end %>

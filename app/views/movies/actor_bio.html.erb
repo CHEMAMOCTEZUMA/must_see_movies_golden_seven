@@ -1,23 +1,22 @@
+<div class="container">
+<div class="page-header">
 <h1> <%= @actor.name %></h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Bio</th>
-    <th>Birthday</th>
-  </tr>
+<dl class="dl-horizontal">
 
+    <dt>Name</dt>
+    <dd> <%= @actor.name %> </dd>
+
+    <dt>Bio</dt>
+    <dd><%= @actor.bio %>"></dd>
+    
+    <dt>Birthday</dt>
+    <dd><%= @actor.dob %></dd>
+
+    <dd><img src="<%= @actor.image_url %>" width="320"></dd>
+
+  </dl>
+  </div>
   <tr>
-    <td>
-      <img src="<%= @actor.image_url %>" width="200">
-    </td>
-    <td>
-      <%= @actor.bio %>">
-    </td>
-    <td>
-      <%= @actor.dob %>
-    </td>
-  </tr>
-  <tr>
-    <a href="http://localhost:3000/actors">Back</a>
+    <a class="btn btn-primary" href="http://localhost:3000/actors">Back</a>
   </tr>

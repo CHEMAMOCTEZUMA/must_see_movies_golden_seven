@@ -1,27 +1,41 @@
+<div class="container">
+<div class="page-header">
 <h1>A New Actor</h1>
 
-<form action="http://localhost:3000/create_actor">
-	<div>
-		<label for="actor_name">Name</label>
-		<input id="actor_name" type="text" name="name">
+<form action="http://localhost:3000/create_actor" class="form-horizontal">
+<div class="form-group">
+ 	<div>
+		<label for="actor_name" class="col-sm-2 control-label">Name</label>
+	<div class="col-sm-10">
+		<input id="actor_name" type="text" name="name" class="form-control">
 	</div>
-	
-	<div>
-		<label for="actor_image_url">URL</label>
-		<input id="actor_image_url" type="text" name="image_url">
 	</div>
 
-	<div>
-		<label for="actor_bio">Bio</label>
-		<input id="actor_bio" type="text" name="bio">
+ 	<div>
+		<label for="actor_image_url" class="col-sm-2 control-label">URL</label>
+	<div class="col-sm-10">
+		<input id="actor_image-url" type="text" name="image_url" class="form-control">
+	</div>
 	</div>
 
-	<div>
-		<label for="actor_dob">Birthday</label>
-		<input id="actor_dob" type="text" name="dob">
+ 	<div>
+		<label for="actor_bio" class="col-sm-2 control-label">Bio</label>
+	<div class="col-sm-10">
+		<input id="actor_bio" type="text" name="bio" class="form-control">
 	</div>
-	
-	<div>
-		<button>Create</button>
+	</div>
+
+ 	<div>
+		<label for="actor_dob" class="col-sm-2 control-label">Birthday</label>
+	<div class="col-sm-10">
+		<input id="actor_dob" type="text" name="dob" class="form-control">
+	</div>
+	</div>
+</div>
+
+	<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+		<button class="btn btn-primary">Create</button>
+	</div>
 	</div>
 </form>

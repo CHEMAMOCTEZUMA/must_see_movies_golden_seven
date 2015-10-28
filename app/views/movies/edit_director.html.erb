@@ -1,6 +1,8 @@
+<div class="container">
+ <div class="page-header">
 <h1>Edit <%= @director.name %> </h1>
 
-<form action="http://localhost:3000/directors/update_director/<%= @director.id %>">
+<form action="http://localhost:3000/directors/update_director/<%= @director.id %>" class="form-horizontal">
 	<div>
 		<label for="director_name">Name</label>
 		<input id="director_name" type="text" name="name" value="<%= @director.name %>">
@@ -22,6 +24,6 @@
 	</div>
 	
 	<div>
-		<button>Update Director</button>
+		<button class="btn btn-primary">Update Director</button>
 	</div>
 </form>
