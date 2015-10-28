@@ -39,6 +39,23 @@ class MoviesController < ApplicationController
 
   end
 
+  def director_form
+
+  end
+
+  def create_director
+
+  	@new = Director.new 
+  	@new.name = params[:name]
+  	@new.image_url = params[:image_url]
+  	@new.bio = params[:bio]
+  	@new.dob = params[:dob]
+  	@new.save
+
+  	redirect_to("http://localhost:3000/directors")
+
+  end
+
   def actor
 
   	@list_of_actors = Actor.all
@@ -75,6 +92,23 @@ class MoviesController < ApplicationController
 	@delete_actor = Actor.find_by({:id => params[:id]})
 	@name = @delete_actor.name
 	@delete_actor.destroy
+
+  end
+
+  def actor_form
+
+  end
+
+  def create_actor
+
+  	@new = Actor.new 
+  	@new.name = params[:name]
+  	@new.image_url = params[:image_url]
+  	@new.bio = params[:bio]
+  	@new.dob = params[:dob]
+  	@new.save
+
+  	redirect_to("http://localhost:3000/actors")
 
   end
 
@@ -115,6 +149,24 @@ class MoviesController < ApplicationController
 	@delete_movie = Movie.find_by({:id => params[:id]})
 	@name = @delete_movie.title
 	@delete_movie.destroy
+
+  end
+
+  def movie_form
+
+  end
+
+  def create_movie
+
+  	@new = Movie.new 
+  	@new.title = params[:title]
+  	@new.image_url = params[:image_url]
+  	@new.year = params[:year]
+  	@new.duration = params[:duration]
+  	@new.description = params[:description]
+  	@new.save
+
+  	redirect_to("http://localhost:3000/movies")
 
   end
 
